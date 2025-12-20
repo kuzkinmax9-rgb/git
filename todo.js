@@ -34,3 +34,33 @@ class TodoList {
     getPendingTasks() {
         return this.tasks.filter(t => !t.completed); // Возвращаем невыполненные задачи
     }
+    getTaskCount() {
+        const total = this.tasks.length; // Общее количество задач
+        const completed = this.getCompletedTasks().length; // Количество выполненных
+        const pending = this.getPendingTasks().length; // Количество невыполненных
+        return { total, completed, pending }; // Возвращаем статистику
+    }
+}
+
+const myTodo = new TodoList("Мои задачи");
+
+// Добавляем задачи
+myTodo.addTask("Купить молоко");
+myTodo.addTask("Сделать домашку");
+myTodo.addTask("Позвонить маме");
+
+// Отмечаем одну задачу как выполненную
+myTodo.completeTask(1);
+
+// Получаем статистику
+console.log(myTodo.getTaskCount());
+// { total: 3, completed: 1, pending: 2 }
+
+// Смотрим невыполненные задачи
+console.log(myTodo.getPendingTasks());
+
+// Удаляем одну задачу
+myTodo.deleteTask(2);
+
+// Проверяем оставшиеся задачи
+console.log(myTodo.getAllTasks());
