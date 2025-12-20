@@ -22,3 +22,15 @@ class TodoList {
             console.log(`Задача с ID ${taskId} не найдена.`);
         }
     }
+    
+    getAllTasks() {
+        return this.tasks; // Возвращаем все задачи
+    }
+
+    getCompletedTasks() {
+        return this.tasks.filter(t => t.completed); // Возвращаем выполненные задачи
+    }
+
+    getPendingTasks() {
+        return this.tasks.filter(t => !t.completed); // Возвращаем невыполненные задачи
+    }
