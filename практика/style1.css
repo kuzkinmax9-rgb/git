@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #ffffff;
+    color: #000000;
+    line-height: 1.4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+
+.header {
+    background-color: #b62b09;
+    padding: 24px 0 16px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: -0.5px;
+    flex-shrink: 0;
+    z-index: 2;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+.menu {
+    justify-content: center;
+    display: flex;
+    gap: 28px;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.menu a:hover {
+    color: #000000;
+}
+
+
+.footer {
+    padding: 40px 0 50px;
+    background: #b62b09;
+    margin-top: 20px;
+}
+
+.footer-content {
+    text-align: center;
+    color: #000000;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.footer-email {
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-email:hover {
+    text-decoration: underline;
+}
+
+.catalog {
+    padding: 50px 0 70px;
+}
+
+.catalog-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.product-card {
+    background: #b62b09;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.2s;
+}
+
+.product-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    background: #e5e7eb;
+}
+
+.product-content {
+    padding: 16px;
+}
+
+.product-content h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 6px;
+}
+
+.product-content p {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #000000;
+}
